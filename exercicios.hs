@@ -183,5 +183,3 @@ retornaTupla2 x y z = (reverse x, reverse y, reverse z)
 --3.10 Implemente a funcao revNum, que deve receber uma String s e um Int n, retornando as n primeiras letras da String em ordem reversa e o restante em ordem normal
 revNum :: String -> Int -> String
 revNum s n = reverse [(s !! i) | i <- [0..n - 1]] ++ [(s !! j) | j <- [n..length s - 1]]
-
---3.11
