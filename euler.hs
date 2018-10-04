@@ -21,4 +21,4 @@ listPrimes :: Int -> [Int]
 listPrimes x = [i | i <- [1..x], isPrime i == True]
 
 euler3 :: Int -> Int
-euler3 x = maximum [i | i <- [1..x], isPrime i == True, x `mod` i == 0]
+euler3 x = maximum [i | i <- [1..x], isPrime i == True, mod x i == 0]
