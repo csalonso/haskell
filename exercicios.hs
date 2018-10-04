@@ -88,15 +88,13 @@ converterKelvin x Farenheit = ((x - 32) / 1.8) + 273
 data Jokenpo = Pedra | Papel | Tesoura | Empate deriving Show
 
 playJokenpo :: Jokenpo -> Jokenpo -> Jokenpo
-playJokenpo Pedra Pedra = Empate
 playJokenpo Pedra Papel = Papel
 playJokenpo Pedra Tesoura = Pedra
 playJokenpo Papel Pedra = Papel
-playJokenpo Papel Papel = Empate
 playJokenpo Papel Tesoura = Tesoura
 playJokenpo Tesoura Pedra = Pedra
 playJokenpo Tesoura Papel = Tesoura
-playJokenpo Tesoura Tesoura = Empate
+playJokenpo _ _ = Empate
 
 --3.4 Receba uma String e retorne ela sem vogais (Maiusculas ou Minusculas) usando list compreenshion
 removeVogal :: String -> String
